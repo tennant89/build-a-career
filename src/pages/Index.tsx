@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import HeroSection from '@/components/home/HeroSection';
+import JobListings from '@/components/home/JobListings';
+import TalentPool from '@/components/home/TalentPool';
+import JobRoles from '@/components/home/JobRoles';
+import VideoCarousel from '@/components/home/VideoCarousel';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <JobListings />
+        <TalentPool />
+        <JobRoles />
+        <VideoCarousel />
+      </main>
+      <Footer />
     </div>
   );
 };
