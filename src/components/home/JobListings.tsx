@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
@@ -42,8 +42,30 @@ const featuredJobs = [
 ];
 
 const JobListings = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Add reveal effect
+  useEffect(() => {
+    const revealSection = () => {
+      if (sectionRef.current) {
+        const sectionTop = sectionRef.current.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.75) {
+          sectionRef.current.classList.add('revealed');
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', revealSection);
+    // Initial check
+    revealSection();
+    
+    return () => window.removeEventListener('scroll', revealSection);
+  }, []);
+
   return (
-    <section className="py-20 bg-gray-50">
+    <section ref={sectionRef} className="py-20 bg-gray-50 reveal-section">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-hyundai-blue">Current Openings</h2>

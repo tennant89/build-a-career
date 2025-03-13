@@ -6,11 +6,9 @@ import { cn } from '@/lib/utils';
 import Container from '@/components/ui/Container';
 
 const menuItems = [
-  { name: 'Job Listings', path: '/jobs' },
-  { name: 'Open Positions', path: '/positions' },
-  { name: 'Application Status', path: '/status' },
-  { name: 'Announcements', path: '/announcements' },
-  { name: 'Contact Us', path: '/contact' },
+  { name: 'Jobs', path: '/jobs' },
+  { name: 'Talent Pool', path: '/positions' },
+  { name: 'My Application', path: '/status' },
 ];
 
 const Navbar = () => {
@@ -45,7 +43,7 @@ const Navbar = () => {
     >
       <Container>
         <nav className="flex items-center justify-between py-4">
-          {/* Logo */}
+          {/* Logo - reduced by 30% */}
           <Link 
             to="/" 
             className="relative z-10"
@@ -54,7 +52,10 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/189fdd07-6c45-4faf-b669-85fecef152a8.png" 
               alt="Hyundai Engineering & Construction" 
-              className="h-10 w-auto"
+              className={cn(
+                "h-7 w-auto transition-all", // Reduced height by 30% from 10 to 7
+                !scrolled && "brightness-0 invert" // White version when over transparent background
+              )}
             />
           </Link>
 
@@ -65,10 +66,11 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-hyundai-blue relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-hyundai-blue after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100',
+                  'text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-hyundai-blue after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100',
                   location.pathname === item.path
                     ? 'text-hyundai-blue after:scale-x-100'
-                    : 'text-gray-700'
+                    : !scrolled ? 'text-white' : 'text-gray-700',
+                  !scrolled && 'hover:text-white/90'
                 )}
               >
                 {item.name}
@@ -79,7 +81,10 @@ const Navbar = () => {
           {/* Language Selector + Mobile Menu Button */}
           <div className="flex items-center">
             <button 
-              className="flex items-center text-sm font-medium text-gray-700 hover:text-hyundai-blue transition-colors mr-8"
+              className={cn(
+                "flex items-center text-sm font-medium transition-colors mr-8",
+                !scrolled ? "text-white" : "text-gray-700 hover:text-hyundai-blue"
+              )}
               aria-label="Switch language"
             >
               <Globe size={18} className="mr-2" />
@@ -88,7 +93,10 @@ const Navbar = () => {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-700 hover:text-hyundai-blue transition-colors focus:outline-none"
+              className={cn(
+                "md:hidden transition-colors focus:outline-none",
+                !scrolled ? "text-white" : "text-gray-700 hover:text-hyundai-blue"
+              )}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? (

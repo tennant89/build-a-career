@@ -6,17 +6,17 @@ import Button from '@/components/ui/Button';
 
 const TalentPool = () => {
   return (
-    <section className="py-20 bg-hyundai-blue text-white">
+    <section className="py-20 bg-gray-800 text-white reveal-section"> {/* Changed to monochrome background */}
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-blue-100 text-sm font-medium mb-4">
+            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-gray-200 text-sm font-medium mb-4">
               Join Our Talent Network
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
               Can't find the perfect role? Join our talent pool
             </h2>
-            <p className="text-blue-100 mb-8 max-w-lg">
+            <p className="text-gray-300 mb-8 max-w-lg">
               Register your interest and skills with Hyundai Engineering & Construction. We'll notify you when relevant 
               opportunities arise that match your expertise and career aspirations.
             </p>
@@ -38,11 +38,11 @@ const TalentPool = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-hyundai-green text-white p-4 rounded-lg max-w-xs shadow-lg">
+            <div className="absolute -bottom-6 -left-6 bg-gray-900 text-white p-4 rounded-lg max-w-xs shadow-lg">
               <p className="font-medium">
                 "Joining the talent pool helped me find the perfect role when it became available."
               </p>
-              <p className="text-sm mt-2">— Sarah Kim, Project Engineer</p>
+              <p className="text-sm mt-2 text-gray-400">— Sarah Kim, Project Engineer</p>
             </div>
           </div>
         </div>

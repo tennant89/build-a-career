@@ -6,13 +6,13 @@ import { cn } from '@/lib/utils';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full bg-black/40 z-10"></div>
+    <section className="relative h-screen w-full overflow-hidden reveal-section">
+      {/* Background Image - Changed to new hero image */}
+      <div className="absolute inset-0 w-full h-full bg-black/50 z-10"></div> {/* Enhanced dim effect for readability */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundImage: "url('/lovable-uploads/3664dc50-221c-40bb-a435-c47fd5313e21.png')"
         }}
       ></div>
       
@@ -48,10 +48,10 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="w-8 h-12 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse-subtle"></div>
+      {/* Scroll indicator - centered and reduced size */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+        <div className="w-4 h-6 border-2 border-white rounded-full flex justify-center"> {/* Reduced size by 50% */}
+          <div className="w-1 h-2 bg-white rounded-full mt-1 animate-pulse-subtle"></div>
         </div>
         <p className="text-white text-xs mt-2 text-center">Scroll Down</p>
       </div>
