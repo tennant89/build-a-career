@@ -52,10 +52,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/189fdd07-6c45-4faf-b669-85fecef152a8.png" 
               alt="Hyundai Engineering & Construction" 
-              className={cn(
-                "h-7 w-auto transition-all", // Reduced height by 30% from 10 to 7
-                !scrolled && "brightness-0 invert" // White version when over transparent background
-              )}
+              className="h-7 w-auto transition-all" // Reduced height by 30% from 10 to 7
             />
           </Link>
 
@@ -69,8 +66,7 @@ const Navbar = () => {
                   'text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-hyundai-blue after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100',
                   location.pathname === item.path
                     ? 'text-hyundai-blue after:scale-x-100'
-                    : !scrolled ? 'text-white' : 'text-gray-700',
-                  !scrolled && 'hover:text-white/90'
+                    : 'text-gray-700',
                 )}
               >
                 {item.name}
@@ -81,10 +77,7 @@ const Navbar = () => {
           {/* Language Selector + Mobile Menu Button */}
           <div className="flex items-center">
             <button 
-              className={cn(
-                "flex items-center text-sm font-medium transition-colors mr-8",
-                !scrolled ? "text-white" : "text-gray-700 hover:text-hyundai-blue"
-              )}
+              className="flex items-center text-sm font-medium transition-colors mr-8 text-gray-700 hover:text-hyundai-blue"
               aria-label="Switch language"
             >
               <Globe size={18} className="mr-2" />
@@ -93,10 +86,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={cn(
-                "md:hidden transition-colors focus:outline-none",
-                !scrolled ? "text-white" : "text-gray-700 hover:text-hyundai-blue"
-              )}
+              className="md:hidden transition-colors focus:outline-none text-gray-700 hover:text-hyundai-blue"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? (
