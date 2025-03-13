@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -28,23 +29,25 @@ const HeroSection = () => {
           Join Hyundai Engineering & Construction and be part of transformative projects that shape communities worldwide.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <Button 
-            variant="primary" 
-            size="lg" 
-            href="/jobs" 
-            className="bg-hyundai-blue hover:bg-hyundai-blue/90 shadow-lg"
-            icon={<ArrowRight size={20} />}
-          >
-            View Open Positions
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            href="/register" 
-            className="border-white text-white hover:bg-white/10"
-          >
-            Join Talent Pool
-          </Button>
+          <Link to="/jobs">
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="bg-hyundai-blue hover:bg-hyundai-blue/90 shadow-lg"
+            >
+              <span>View Open Positions</span>
+              <ArrowRight size={20} />
+            </Button>
+          </Link>
+          <Link to="/register">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-white text-white hover:bg-white/10"
+            >
+              Join Talent Pool
+            </Button>
+          </Link>
         </div>
       </div>
       

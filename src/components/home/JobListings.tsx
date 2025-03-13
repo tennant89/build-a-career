@@ -105,9 +105,11 @@ const JobListings = () => {
         </div>
         
         <div className="text-center">
-          <Button variant="outline" size="lg" href="/jobs">
-            Browse All Positions
-          </Button>
+          <Link to="/jobs">
+            <Button variant="outline" size="lg">
+              Browse All Positions
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

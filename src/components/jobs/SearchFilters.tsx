@@ -110,7 +110,6 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden mb-8">
-      {/* Search Bar */}
       <div className="p-4 border-b border-gray-100">
         <div className="relative">
           <input
@@ -131,7 +130,6 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
         </div>
       </div>
       
-      {/* Filter Toggle */}
       <div className="p-4 flex items-center justify-between">
         <button
           onClick={() => setShowFilters(!showFilters)}
@@ -157,11 +155,9 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
         )}
       </div>
       
-      {/* Expanded Filters */}
       {showFilters && (
         <div className="p-4 border-t border-gray-100">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Location Filter */}
             <div>
               <button
                 onClick={() => setActiveFilter(activeFilter === 'location' ? null : 'location')}
@@ -205,7 +201,6 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
               )}
             </div>
             
-            {/* Job Role Filter */}
             <div>
               <button
                 onClick={() => setActiveFilter(activeFilter === 'role' ? null : 'role')}
@@ -249,7 +244,6 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
               )}
             </div>
             
-            {/* Business Area Filter */}
             <div>
               <button
                 onClick={() => setActiveFilter(activeFilter === 'business' ? null : 'business')}
@@ -294,7 +288,6 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
             </div>
           </div>
           
-          {/* Active Filters */}
           {totalActiveFilters > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
               {filters.locations.map((location) => (
@@ -337,8 +330,9 @@ const SearchFilters = ({ onSearch, onFilter }: SearchFiltersProps) => {
           
           <div className="mt-4 flex justify-end">
             <Button 
-              variant="primary" 
+              variant="default" 
               onClick={() => setShowFilters(false)}
+              className="bg-hyundai-blue hover:bg-hyundai-blue/90"
             >
               Apply Filters
             </Button>

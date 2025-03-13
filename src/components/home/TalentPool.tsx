@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { UserPlus } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
+import { Link } from 'react-router-dom';
 
 const TalentPool = () => {
   return (
@@ -19,15 +21,16 @@ const TalentPool = () => {
               Register your interest and skills with Hyundai Engineering & Construction. We'll notify you when relevant 
               opportunities arise that match your expertise and career aspirations.
             </p>
-            <Button 
-              variant="outline"
-              size="lg"
-              href="/register"
-              className="border-white text-white hover:bg-white/10"
-              icon={<UserPlus size={20} />}
-            >
-              Register Your Profile
-            </Button>
+            <Link to="/register">
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white/10"
+              >
+                <UserPlus size={20} />
+                <span>Register Your Profile</span>
+              </Button>
+            </Link>
           </div>
           <div className="relative">
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl">

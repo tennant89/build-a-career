@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Container from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
+import { Link } from 'react-router-dom';
 
 const jobRoles = [
   {
@@ -156,9 +157,11 @@ const JobRoles = () => {
                     <span className="text-sm text-hyundai-green font-medium">{role.title}</span>
                     <h3 className="text-xl font-semibold mt-1 mb-3 text-gray-900">{role.name}</h3>
                     <p className="text-gray-600 mb-4">{role.description}</p>
-                    <Button variant="ghost" href={`/roles/${role.id}`} className="mt-2">
-                      Learn More
-                    </Button>
+                    <Link to={`/roles/${role.id}`}>
+                      <Button variant="ghost" className="mt-2">
+                        Learn More
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
