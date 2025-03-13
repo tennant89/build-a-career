@@ -3,7 +3,7 @@ import React from 'react';
 import { MapPin, Building, Calendar, Clock, Share2, ArrowLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { toast } from 'sonner';
 
 interface JobDetailProps {

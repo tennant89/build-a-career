@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
 // Sample job data

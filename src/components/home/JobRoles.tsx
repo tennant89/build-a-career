@@ -1,11 +1,9 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
-// Updated job roles data with 1:1 aspect ratio images featuring one person per image
 const jobRoles = [
   {
     id: 1,
@@ -77,7 +75,6 @@ const JobRoles = () => {
     }
   };
 
-  // Add reveal effect
   useEffect(() => {
     const revealSection = () => {
       if (sectionRef.current) {
@@ -91,7 +88,6 @@ const JobRoles = () => {
     };
     
     window.addEventListener('scroll', revealSection);
-    // Initial check
     revealSection();
     
     return () => window.removeEventListener('scroll', revealSection);
@@ -108,7 +104,6 @@ const JobRoles = () => {
         </div>
         
         <div className="relative">
-          {/* Navigation Buttons */}
           <div className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 hidden md:block">
             <button 
               onClick={() => scroll('left')} 
@@ -139,7 +134,6 @@ const JobRoles = () => {
             </button>
           </div>
           
-          {/* Scrollable Content */}
           <div 
             ref={scrollRef}
             className="flex overflow-x-auto pb-8 hide-scrollbar snap-x snap-mandatory"
@@ -151,7 +145,7 @@ const JobRoles = () => {
                 className="min-w-[280px] sm:min-w-[350px] md:min-w-[400px] px-4 snap-start"
               >
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 h-full">
-                  <div className="aspect-square overflow-hidden"> {/* Changed to 1:1 aspect ratio */}
+                  <div className="aspect-square overflow-hidden">
                     <img 
                       src={role.image} 
                       alt={role.title} 
@@ -172,7 +166,6 @@ const JobRoles = () => {
           </div>
         </div>
         
-        {/* Mobile Navigation Dots */}
         <div className="flex justify-center space-x-2 mt-6 md:hidden">
           {Array.from({ length: Math.ceil(jobRoles.length / 2) }).map((_, i) => (
             <button

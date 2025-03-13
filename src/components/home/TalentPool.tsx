@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { UserPlus } from 'lucide-react';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
 const TalentPool = () => {
   return (
-    <section className="py-20 bg-gray-800 text-white reveal-section"> {/* Changed to monochrome background */}
+    <section className="py-20 bg-gray-800 text-white reveal-section">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>

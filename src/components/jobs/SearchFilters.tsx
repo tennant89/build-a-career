@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Search, Filter, X, ChevronDown, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
 const locations = [
   'Seoul, Korea',
