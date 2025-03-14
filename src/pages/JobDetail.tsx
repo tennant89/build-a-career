@@ -12,22 +12,22 @@ const jobData = {
   location: 'Seoul, Korea',
   department: 'Construction',
   type: 'Full-time',
-  description: 'Hyundai Engineering & Construction is seeking a Civil Engineer to join our growing team. As a Civil Engineer, you will be responsible for designing, developing, and constructing infrastructure projects including roads, buildings, airports, tunnels, dams, bridges, and water supply systems. You'll work closely with clients and other professionals to ensure that projects meet requirements and are completed on time and within budget.',
+  description: "Hyundai Engineering & Construction is seeking a Civil Engineer to join our growing team. As a Civil Engineer, you will be responsible for designing, developing, and constructing infrastructure projects including roads, buildings, airports, tunnels, dams, bridges, and water supply systems. You'll work closely with clients and other professionals to ensure that projects meet requirements and are completed on time and within budget.",
   qualifications: [
-    'Bachelor's degree in Civil Engineering or related field',
-    'Professional Engineer (PE) license preferred',
-    'Minimum of 3 years of experience in civil engineering',
-    'Proficient in AutoCAD, Civil 3D, and other relevant software',
-    'Strong analytical and problem-solving skills',
-    'Excellent communication and teamwork abilities',
-    'Experience with construction site management is a plus'
+    "Bachelor's degree in Civil Engineering or related field",
+    "Professional Engineer (PE) license preferred",
+    "Minimum of 3 years of experience in civil engineering",
+    "Proficient in AutoCAD, Civil 3D, and other relevant software",
+    "Strong analytical and problem-solving skills",
+    "Excellent communication and teamwork abilities",
+    "Experience with construction site management is a plus"
   ],
   preferences: [
-    'Master's degree in Civil Engineering or related field',
-    'Experience with international projects',
-    'Knowledge of BIM (Building Information Modeling)',
-    'Familiarity with sustainable design principles',
-    'Additional languages (especially Korean) is a plus'
+    "Master's degree in Civil Engineering or related field",
+    "Experience with international projects",
+    "Knowledge of BIM (Building Information Modeling)",
+    "Familiarity with sustainable design principles",
+    "Additional languages (especially Korean) is a plus"
   ],
   applicationPeriod: {
     start: '2023-11-15',
@@ -35,19 +35,19 @@ const jobData = {
   },
   employmentType: 'Full-time, Permanent',
   conditions: [
-    'Competitive salary based on experience and qualifications',
-    'Comprehensive health insurance and retirement benefits',
-    'Paid time off and holiday leave',
-    'Professional development opportunities',
-    'Relocation assistance may be provided for exceptional candidates'
+    "Competitive salary based on experience and qualifications",
+    "Comprehensive health insurance and retirement benefits",
+    "Paid time off and holiday leave",
+    "Professional development opportunities",
+    "Relocation assistance may be provided for exceptional candidates"
   ],
   workLocation: 'Hyundai Engineering & Construction Headquarters, Seoul, Korea with potential for travel to project sites',
   hiringProcess: [
-    'Initial application review',
-    'Online technical assessment',
-    'First round interview (technical)',
-    'Second round interview (with senior management)',
-    'Final decision and offer'
+    "Initial application review",
+    "Online technical assessment",
+    "First round interview (technical)",
+    "Second round interview (with senior management)",
+    "Final decision and offer"
   ],
   additionalNotes: 'Hyundai Engineering & Construction is an equal opportunity employer. We evaluate qualified applicants without regard to race, color, religion, sex, national origin, disability, or any other protected characteristic.'
 };
