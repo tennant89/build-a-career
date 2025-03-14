@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Button as ShadcnButton } from '@/components/ui/button';
+import { Button as ShadcnButton, buttonVariants } from '@/components/ui/button';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
+  variant?: 'default' | 'secondary' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   full?: boolean;
@@ -16,7 +16,7 @@ interface ButtonProps {
 
 const Button = ({ 
   children, 
-  variant = 'primary', 
+  variant = 'default', 
   size = 'md', 
   className,
   full = false,
@@ -28,7 +28,7 @@ const Button = ({
   const buttonClasses = cn(
     'font-medium transition-all duration-300 rounded-md flex items-center justify-center gap-2',
     {
-      'bg-hyundai-blue text-white hover:bg-hyundai-lightblue': variant === 'primary',
+      'bg-hyundai-blue text-white hover:bg-hyundai-lightblue': variant === 'default',
       'bg-hyundai-gray text-hyundai-darkgray hover:bg-gray-200': variant === 'secondary',
       'border border-hyundai-blue text-hyundai-blue hover:bg-hyundai-blue/5': variant === 'outline',
       'text-hyundai-blue hover:bg-hyundai-blue/5': variant === 'ghost',
