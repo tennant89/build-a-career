@@ -1,19 +1,18 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden reveal-section">
-      {/* Background Image - Changed to new hero image */}
-      <div className="absolute inset-0 w-full h-full bg-black/50 z-10"></div> {/* Enhanced dim effect for readability */}
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full bg-black/40 z-10"></div>
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/3664dc50-221c-40bb-a435-c47fd5313e21.png')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
         }}
       ></div>
       
@@ -29,32 +28,30 @@ const HeroSection = () => {
           Join Hyundai Engineering & Construction and be part of transformative projects that shape communities worldwide.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <Link to="/jobs">
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="bg-hyundai-blue hover:bg-hyundai-blue/90 shadow-lg"
-            >
-              <span>View Open Positions</span>
-              <ArrowRight size={20} />
-            </Button>
-          </Link>
-          <Link to="/register">
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-white text-white hover:bg-white/10"
-            >
-              Join Talent Pool
-            </Button>
-          </Link>
+          <Button 
+            variant="primary" 
+            size="lg" 
+            href="/jobs" 
+            className="bg-hyundai-blue hover:bg-hyundai-blue/90 shadow-lg"
+            icon={<ArrowRight size={20} />}
+          >
+            View Open Positions
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            href="/register" 
+            className="border-white text-white hover:bg-white/10"
+          >
+            Join Talent Pool
+          </Button>
         </div>
       </div>
       
-      {/* Scroll indicator - centered and reduced size */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-        <div className="w-4 h-6 border-2 border-white rounded-full flex justify-center"> {/* Reduced size by 50% */}
-          <div className="w-1 h-2 bg-white rounded-full mt-1 animate-pulse-subtle"></div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="w-8 h-12 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse-subtle"></div>
         </div>
         <p className="text-white text-xs mt-2 text-center">Scroll Down</p>
       </div>

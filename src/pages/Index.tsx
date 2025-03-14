@@ -12,25 +12,6 @@ const Index = () => {
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
-    
-    // Initialize the section reveal animations
-    const revealSections = () => {
-      const sections = document.querySelectorAll('.reveal-section');
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (sectionTop < windowHeight * 0.75) {
-          section.classList.add('revealed');
-        }
-      });
-    };
-    
-    window.addEventListener('scroll', revealSections);
-    // Initial check
-    setTimeout(revealSections, 100);
-    
-    return () => window.removeEventListener('scroll', revealSections);
   }, []);
 
   return (

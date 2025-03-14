@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Accessibility } from 'lucide-react';
 import Container from '@/components/ui/Container';
 
 const Footer = () => {
@@ -14,21 +13,12 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/189fdd07-6c45-4faf-b669-85fecef152a8.png" 
                 alt="Hyundai Engineering & Construction" 
-                className="h-7 w-auto brightness-0 invert" // Reduced by 30%
+                className="h-10 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-sm text-blue-100 max-w-xs">
               Building a better future through innovative construction and engineering solutions.
             </p>
-            
-            {/* Web Accessibility Logo */}
-            <div className="flex items-center mt-4 space-x-2">
-              <img 
-                src="/lovable-uploads/d22490fd-4e08-46c8-be12-8f0ff99d3c76.png" 
-                alt="Web Accessibility" 
-                className="h-12 w-auto"
-              />
-            </div>
           </div>
           
           <div>
@@ -36,35 +26,25 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/jobs" className="text-sm text-blue-100 hover:text-white transition-colors">
-                  Jobs
+                  Job Listings
                 </Link>
               </li>
               <li>
                 <Link to="/positions" className="text-sm text-blue-100 hover:text-white transition-colors">
-                  Talent Pool
+                  Open Positions
                 </Link>
               </li>
               <li>
                 <Link to="/status" className="text-sm text-blue-100 hover:text-white transition-colors">
-                  My Application
+                  Application Status
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Information</h3>
+            <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/notice" className="text-sm text-blue-100 hover:text-white transition-colors">
-                  Notice
-                </Link>
-              </li>
-              <li>
-                <Link to="/faqs" className="text-sm text-blue-100 hover:text-white transition-colors">
-                  FAQs
-                </Link>
-              </li>
               <li>
                 <Link to="/about" className="text-sm text-blue-100 hover:text-white transition-colors">
                   About Us

@@ -1,10 +1,10 @@
+
 import React from 'react';
 import { MapPin, Building, Calendar, Clock, Share2, ArrowLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Container from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 import { toast } from 'sonner';
-import { Link } from 'react-router-dom';
 
 interface JobDetailProps {
   job: {
@@ -102,7 +102,7 @@ const JobDetail = ({ job }: JobDetailProps) => {
             </div>
             
             <div className="flex gap-4 mt-6">
-              <Button variant="default" size="lg" className="w-full bg-hyundai-blue hover:bg-hyundai-blue/90">
+              <Button variant="primary" size="lg" full>
                 Apply Now
               </Button>
             </div>
@@ -204,15 +204,14 @@ const JobDetail = ({ job }: JobDetailProps) => {
           
           {/* Footer Actions */}
           <div className="flex flex-col sm:flex-row gap-4 border-t border-gray-200 pt-8">
-            <Link to="/jobs">
-              <Button
-                variant="secondary"
-              >
-                <ArrowLeft size={18} />
-                <span>Back to Job Listings</span>
-              </Button>
-            </Link>
-            <Button variant="default" className="w-full bg-hyundai-blue hover:bg-hyundai-blue/90">
+            <Button
+              variant="secondary"
+              href="/jobs"
+              icon={<ArrowLeft size={18} />}
+            >
+              Back to Job Listings
+            </Button>
+            <Button variant="primary" full>
               Apply Now
             </Button>
           </div>

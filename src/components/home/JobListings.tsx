@@ -1,8 +1,8 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
+import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
 // Sample job data
@@ -42,30 +42,8 @@ const featuredJobs = [
 ];
 
 const JobListings = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  // Add reveal effect
-  useEffect(() => {
-    const revealSection = () => {
-      if (sectionRef.current) {
-        const sectionTop = sectionRef.current.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (sectionTop < windowHeight * 0.75) {
-          sectionRef.current.classList.add('revealed');
-        }
-      }
-    };
-    
-    window.addEventListener('scroll', revealSection);
-    // Initial check
-    revealSection();
-    
-    return () => window.removeEventListener('scroll', revealSection);
-  }, []);
-
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-50 reveal-section">
+    <section className="py-20 bg-gray-50">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-hyundai-blue">Current Openings</h2>
@@ -105,11 +83,9 @@ const JobListings = () => {
         </div>
         
         <div className="text-center">
-          <Link to="/jobs">
-            <Button variant="outline" size="lg">
-              Browse All Positions
-            </Button>
-          </Link>
+          <Button variant="outline" size="lg" href="/jobs">
+            Browse All Positions
+          </Button>
         </div>
       </Container>
     </section>

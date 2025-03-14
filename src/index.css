@@ -96,19 +96,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground font-inter;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-}
-
-/* Reveal Animation for Sections */
-.reveal-section {
-  @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
-}
-
-.reveal-section.revealed {
-  @apply opacity-100 translate-y-0;
 }
 
 /* Custom Animations */
